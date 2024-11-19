@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>মেসার্স জমির উদ্দিন মন্ডল ফ্রুটস</title> 
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #FFDDC1, #FFABAB);
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #FF5733;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #FF5733;
+            font-weight: bold;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px;
+        }
+
+        .product {
+            text-align: center;
+            border: 2px solid #FF5733;
+            border-radius: 10px;
+            padding: 10px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 200px;
+        }
+
+        .product img {
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+        }
+
+        .product button {
+            background-color: #FF5733;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .product button:hover {
+            background-color: #C70039;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #FF5733;
+            color: white;
+            margin-top: 20px;
+        }
+    </style> 
+ </head> 
+ <body> 
+  <header> 
+   <h1>মেসার্স জমির উদ্দিন মন্ডল ফ্রুটস</h1> 
+   <p>তাজা এবং পুষ্টিকর ফলের সেরা গন্তব্য</p> 
+  </header> 
+  <nav> <a href="#banana">কলা</a> <a href="#apple">আপেল</a> <a href="#orange">কমলা</a> <a href="#amra">আমড়া</a> <a href="#watermelon">তরমুজ</a> <a href="#bel">বেল</a> <a href="#jackfruit">কাঁঠাল</a> 
+  </nav> 
+  <div class="products"> 
+   <div class="product" id="banana"> 
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Banana-Single.jpg" alt="কলা"> 
+    <h2>কলা</h2> 
+    <p>তাজা পাকা কলা</p> <button onclick="orderNow()">অর্ডার করুন</button> 
+   </div> 
+   <div class="product" id="apple"> 
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg" alt="আপেল"> 
+    <h2>আপেল</h2> 
+    <p>রসালো আপেল</p> <button onclick="orderNow()">অর্ডার করুন</button> 
+   </div> 
+   <div class="product" id="orange"> 
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Orange-Fruit-Pieces.jpg" alt="কমলা"> 
+    <h2>কমলা</h2> 
+    <p>পুষ্টিকর কমলা</p> <button onclick="orderNow()">অর্ডার করুন</button> 
+   </div> 
+   <div class="product" id="amra"> 
+    <img src="data:image/jpeg;base64,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" alt="আমড়া"> 
+    <h2>আমড়া</h2> 
+    <p>টক মিষ্টি আমড়া</p> <button onclick="orderNow()">অর্ডার করুন</button> 
+   </div> 
+   <div class="product" id="watermelon"> 
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Watermelon_cross_BNC.jpg/800px-Watermelon_cross_BNC.jpg" alt="তরমুজ"> 
+    <h2>তরমুজ</h2> 
+    <p>পুষ্টিকর তরমুজ</p> <button onclick="orderNow()">অর্ডার করুন</button> 
+   </div> 
+   <div class="product" id="bel"> 
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Bael08_Mounts_Asit.JPG/800px-Bael08_Mounts_Asit.JPG" alt="বেল"> 
+    <h2>বেল</h2> 
+    <p>পুষ্টিকর বেল</p> <button onclick="orderNow()">অর্ডার করুন</button> 
+   </div> 
+   <div class="product" id="jackfruit"> 
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Artocarpus_heterophyllus_fruits_at_tree.jpg" alt="কাঁঠাল"> 
+    <h2>কাঁঠাল</h2> 
+    <p>মিষ্টি কাঁঠাল</p> <button onclick="orderNow()">অর্ডার করুন</button> 
+   </div> 
+  </div> 
+  <footer> 
+   <p>© ২০২৪ মেসার্স জমির উদ্দিন মন্ডল ফ্রুটস</p> 
+  </footer> 
+  <script>
+        function orderNow() {
+            window.location.href = "https://forms.gle/vZwb3uaWYgxZAh9j6"; // গুগল ফর্মের লিংক দিন
+        }
+    </script> 
+ 
+</body></html>
